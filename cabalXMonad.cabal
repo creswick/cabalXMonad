@@ -1,0 +1,38 @@
+name:                cabalXMonad
+version:             0.0.0.1
+synopsis:            <<<synopsis>>>
+description:         <<<description>>>
+category:            Tools
+license:             BSD3
+License-file:        LICENSE
+author:              Rogan Creswick
+maintainer:          <<<authoremail>>>
+Cabal-Version:       >=1.8.0.6
+build-type:          Simple
+
+Flag tests
+   Description:    Build the tests
+   Default:        False
+
+Executable cabalXMonad
+   Main-Is:          cabalXMonad.hs
+   hs-source-dirs:   src
+
+   Build-depends:    base       >= 4       && < 6,
+--                     xmonad     >= 0.9.2   && < 0.10,
+                     xmonad-bluetilebranch >= 0.9.1.4 && < 0.9.2,
+                     xmonad-contrib-bluetilebranch >= 0.9.1.5 && < 0.9.2
+
+   ghc-options:      -Wall
+
+-- Executable test-cabalXMonad
+--    Main-Is:          Main.hs
+--    hs-source-dirs:   tests/src
+
+--    if !flag(tests)
+--       Buildable:              False
+
+--    Build-depends:    cabalXMonad,
+--                      base       >= 4       && < 6
+
+--    ghc-options:      -Wall
